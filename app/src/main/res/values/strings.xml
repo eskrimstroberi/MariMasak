@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mari Masak</string>
+    <string name="name">Nama Resep</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="description">deskripsi</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+</resources>
