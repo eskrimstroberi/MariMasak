@@ -4,16 +4,19 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Email
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 
     class MainActivity : AppCompatActivity(), View.OnClickListener {
+        private lateinit var username: EditText
         private lateinit var email: EditText
         private lateinit var password: EditText
         private lateinit var btnLogin: Button
 
-        private val key_Email = "MM"
+        private val key_Username = "MM"
+        private val key_Email = "II"
         private val key_password = "EE"
 
         @SuppressLint("WrongViewCast")
@@ -21,27 +24,36 @@ import android.widget.EditText
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
-            email = findViewById(R.id.username)
+            username = findViewById(R.id.username)
             password = findViewById(R.id.password)
 
             val btnLogin: Button = findViewById(R.id.btnLogin)
             btnLogin.setOnClickListener(this)
+
+            val btnRegister: Button = findViewById(R.id.btnRegister)
+            btnRegister.setOnClickListener(this)
         }
 
         override fun onClick(v: View) {
-            val username = email.text.toString()
+            val username = username.text.toString()
             val password = password.text.toString()
-            if (username.isNotBlank() && password.isNotBlank()) {
+            if (username.isNotBlank() && username.isNotBlank() && password.isNotBlank()) {
                 when (v.id) {
                     R.id.btnLogin -> {
                         val moveIntent = Intent(this@MainActivity, Home::class.java)
-                        moveIntent.putExtra(key_Email, username)
+                        moveIntent.putExtra(key_Username, username)
                         moveIntent.putExtra(key_password, password)
+                        startActivity(moveIntent)
+                    }
+                    R.id.btnRegister -> {
+                        val moveIntent = Intent(this@MainActivity, Register::class.java)
                         startActivity(moveIntent)
                     }
                 }
             }
+
         }
     }
+
 
 

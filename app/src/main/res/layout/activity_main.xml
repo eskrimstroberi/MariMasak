@@ -27,7 +27,8 @@
             android:layout_height="500dp"
             android:src="@drawable/beige"
             android:layout_gravity="center"
-            android:layout_marginBottom="140dp"/>
+            android:layout_marginBottom="180dp"/>
+
 
     </FrameLayout>
 
@@ -49,28 +50,25 @@
         android:layout_alignParentLeft="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="343dp"
+        android:layout_marginTop="303dp"
         android:ems="20"
         android:hint="Username"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/username"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="-40dp"
-        android:layout_marginRight="-40dp"
-        android:ems="20"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="355dp"
+            android:ems="20"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
     <Button
             android:id="@+id/btnLogin"
@@ -78,8 +76,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/password"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="42dp"
-            android:text="Log In"
+            android:layout_marginTop="40dp"
+            android:text="Sign In"
+            android:backgroundTint="@color/biroe"/>
+
+    <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Belum punya akun ? Sign Up"
             android:backgroundTint="@color/biroe"/>
 
 

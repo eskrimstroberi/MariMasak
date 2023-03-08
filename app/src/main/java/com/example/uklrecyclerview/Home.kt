@@ -32,7 +32,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
                 GridResepAdapter.setOnItemClickCallback(object : GridResepAdapter.OnItemClickCallback {
-                    override fun onItemClicked(data: Resep) {showSelectedHero(data)}
+                    override fun onItemClicked(data: Resep) {showSelectedResep(data)}
             })
         }
             override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,12 +57,12 @@ import androidx.recyclerview.widget.RecyclerView
             }
             private fun showRecyclerGrid() {
                 rvResep.layoutManager = GridLayoutManager(this, 2)
-                val gridHeroAdapter = GridResepAdapter(list)
-                rvResep.adapter = gridHeroAdapter
+                val gridResepAdapter = GridResepAdapter(list)
+                rvResep.adapter = gridResepAdapter
 
-                gridHeroAdapter.setOnItemClickCallback(object : GridResepAdapter.OnItemClickCallback {
+                gridResepAdapter.setOnItemClickCallback(object : GridResepAdapter.OnItemClickCallback {
                     override fun onItemClicked(data: Resep) {
-                        showSelectedHero(data)
+                        showSelectedResep(data)
                     }
                 })
 
@@ -76,7 +76,7 @@ import androidx.recyclerview.widget.RecyclerView
             private fun setActionBarTitle(title: String) {
                 supportActionBar?.title = title
             }
-            private fun showSelectedHero(resep: Resep){
+            private fun showSelectedResep(resep: Resep){
                 Toast.makeText(this, "Kamu memilih " + resep.name, Toast.LENGTH_SHORT).show()
             }
         }

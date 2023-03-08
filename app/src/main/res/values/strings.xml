@@ -7,4 +7,8 @@
     <string name="description">deskripsi</string>
     <string name="favorite">Favorite</string>
     <string name="share">Share</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Sign Up</string>
+    <string name="tab_text_1">Sign Up</string>
+    <string name="tab_text_2">Result</string>
 </resources>
